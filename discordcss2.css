@@ -1,0 +1,313 @@
+/**
+* @name Improved Discord
+* @author Tharpadarp
+* @version 1.0
+* @description Modifies the appearance Discord
+*/
+/*Improved Links*/
+[class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
+  transition: background-color 50ms ease-out, color 50ms ease-out;
+  color: var(--mention-foreground);
+  background-color: var(--mention-background);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+  border-bottom: 0px solid var(--brand-700);
+}
+[class^=message_] [class^=contents_] [class^=anchor_]::before, [class^=message_] [class^=repliedMessage_] [class^=anchor_]::before, [class^=message_] [class^=modal] [class^=anchor_]::before, [class^=message_] [class^=topic_] [class^=anchor_]::before, [class^=focusLock] [class^=contents_] [class^=anchor_]::before, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]::before, [class^=focusLock] [class^=modal] [class^=anchor_]::before, [class^=focusLock] [class^=topic_] [class^=anchor_]::before, [class^=title] [class^=contents_] [class^=anchor_]::before, [class^=title] [class^=repliedMessage_] [class^=anchor_]::before, [class^=title] [class^=modal] [class^=anchor_]::before, [class^=title] [class^=topic_] [class^=anchor_]::before {
+  content: "🔗";
+  margin-right: 1px;
+  filter: saturate(0%);
+  font-size: 90%;
+}
+[class^=message_] [class^=contents_] [class^=anchor_]:hover, [class^=message_] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=message_] [class^=modal] [class^=anchor_]:hover, [class^=message_] [class^=topic_] [class^=anchor_]:hover, [class^=focusLock] [class^=contents_] [class^=anchor_]:hover, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=focusLock] [class^=modal] [class^=anchor_]:hover, [class^=focusLock] [class^=topic_] [class^=anchor_]:hover, [class^=title] [class^=contents_] [class^=anchor_]:hover, [class^=title] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=title] [class^=modal] [class^=anchor_]:hover, [class^=title] [class^=topic_] [class^=anchor_]:hover {
+  background-color: var(--brand-experiment);
+}
+
+
+
+/*Use Original Codeblock Colors*/
+#app-mount .hljs-comment,
+#app-mount .hljs-quote {
+  color: #586e75;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-keyword,
+#app-mount .hljs-selector-tag {
+  color: #859900;
+}
+#app-mount .hljs-doctag,
+#app-mount .hljs-literal,
+#app-mount .hljs-meta .hljs-meta-string,
+#app-mount .hljs-number,
+#app-mount .hljs-regexp,
+#app-mount .hljs-string {
+  color: #2aa198;
+}
+#app-mount .hljs-name,
+#app-mount .hljs-section,
+#app-mount .hljs-selector-class,
+#app-mount .hljs-selector-id,
+#app-mount .hljs-title,
+#app-mount .hljs-operator {
+  color: #268bd2;
+  font-weight: inherit;
+}
+#app-mount .hljs-attr,
+#app-mount .hljs-attribute,
+#app-mount .hljs-title.class_,
+#app-mount .hljs-template-variable,
+#app-mount .hljs-type,
+#app-mount .hljs-variable {
+  color: #b58900;
+}
+#app-mount .hljs-bullet,
+#app-mount .hljs-link,
+#app-mount .hljs-meta,
+#app-mount .hljs-meta .hljs-keyword,
+#app-mount .hljs-selector-attr,
+#app-mount .hljs-selector-pseudo,
+#app-mount .hljs-subst,
+#app-mount .hljs-symbol {
+  color: #cb4b16;
+}
+#app-mount .hljs-built_in,
+#app-mount .hljs-deletion {
+  color: #dc322f;
+}
+#app-mount .hljs-formula {
+  background: #073642;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-deletion {
+  background-color: unset;
+}
+#app-mount .hljs-emphasis {
+  font-style: italic;
+}
+#app-mount .hljs-strong {
+  font-weight: 700;
+}
+
+:root {
+  --font-code: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+
+
+/*Use Original Codeblock Colors*/
+#app-mount .hljs-comment,
+#app-mount .hljs-quote {
+  color: #586e75;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-keyword,
+#app-mount .hljs-selector-tag {
+  color: #859900;
+}
+#app-mount .hljs-doctag,
+#app-mount .hljs-literal,
+#app-mount .hljs-meta .hljs-meta-string,
+#app-mount .hljs-number,
+#app-mount .hljs-regexp,
+#app-mount .hljs-string {
+  color: #2aa198;
+}
+#app-mount .hljs-name,
+#app-mount .hljs-section,
+#app-mount .hljs-selector-class,
+#app-mount .hljs-selector-id,
+#app-mount .hljs-title,
+#app-mount .hljs-operator {
+  color: #268bd2;
+  font-weight: inherit;
+}
+#app-mount .hljs-attr,
+#app-mount .hljs-attribute,
+#app-mount .hljs-title.class_,
+#app-mount .hljs-template-variable,
+#app-mount .hljs-type,
+#app-mount .hljs-variable {
+  color: #b58900;
+}
+#app-mount .hljs-bullet,
+#app-mount .hljs-link,
+#app-mount .hljs-meta,
+#app-mount .hljs-meta .hljs-keyword,
+#app-mount .hljs-selector-attr,
+#app-mount .hljs-selector-pseudo,
+#app-mount .hljs-subst,
+#app-mount .hljs-symbol {
+  color: #cb4b16;
+}
+#app-mount .hljs-built_in,
+#app-mount .hljs-deletion {
+  color: #dc322f;
+}
+#app-mount .hljs-formula {
+  background: #073642;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-deletion {
+  background-color: unset;
+}
+#app-mount .hljs-emphasis {
+  font-style: italic;
+}
+#app-mount .hljs-strong {
+  font-weight: 700;
+}
+
+:root {
+  --font-code: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+
+
+/*Remove stupid ass edit image with AI*/
+[aria-label="Edit Image with Apps"] {
+  display: none;
+}
+
+
+
+/*Compact Emotes Are Larger*/
+.contents_f9f2ca [class="emoji"] ,
+[class="emoji jumboable"] {
+  font-size: 34px;                              /*This is what makes emotes larger*/
+  bottom: 12px                              /*Makes messages with emotes larger*/
+}
+.threadMessageAccessory_f9f2ca [class="emoji"] {     /*Thread containers no longer have oversized emotes*/
+  font-size: 16px !important;
+}
+.contents_f9f2ca::before {      /*Hide weird extension of Thread*/
+  display: none;
+}
+
+[class="repliedMessage_f9f2ca latin24CompactTimeStamp_f9f2ca"]:has(+ .contents_f9f2ca [class="emoji"] , + .contents_f9f2ca [class="emoji jumboable"]) .repliedMessageClickableSpine_f9f2ca  {      /*Make replied messages with emotes have a longer line*/
+  height: 34px !important;
+}
+.contents_f9f2ca [class="emoji"] {          /*Moves emotes to be in line*/
+  transform: translate(0px, 12px);
+}
+.contents_f9f2ca:has([class="emoji jumboable"]) {         /*Moves emotes to be in line*/
+  transform: translate(0px, 12px);
+}
+
+
+
+/*Improved Links*/
+[class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
+  transition: background-color 50ms ease-out, color 50ms ease-out;
+  color: var(--mention-foreground);
+  background-color: var(--mention-background);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+  border-bottom: 0px solid var(--brand-700);
+}
+[class^=message_] [class^=contents_] [class^=anchor_]::before, [class^=message_] [class^=repliedMessage_] [class^=anchor_]::before, [class^=message_] [class^=modal] [class^=anchor_]::before, [class^=message_] [class^=topic_] [class^=anchor_]::before, [class^=focusLock] [class^=contents_] [class^=anchor_]::before, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]::before, [class^=focusLock] [class^=modal] [class^=anchor_]::before, [class^=focusLock] [class^=topic_] [class^=anchor_]::before, [class^=title] [class^=contents_] [class^=anchor_]::before, [class^=title] [class^=repliedMessage_] [class^=anchor_]::before, [class^=title] [class^=modal] [class^=anchor_]::before, [class^=title] [class^=topic_] [class^=anchor_]::before {
+  content: "🔗";
+  margin-right: 1px;
+  filter: saturate(0%);
+  font-size: 90%;
+}
+[class^=message_] [class^=contents_] [class^=anchor_]:hover, [class^=message_] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=message_] [class^=modal] [class^=anchor_]:hover, [class^=message_] [class^=topic_] [class^=anchor_]:hover, [class^=focusLock] [class^=contents_] [class^=anchor_]:hover, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=focusLock] [class^=modal] [class^=anchor_]:hover, [class^=focusLock] [class^=topic_] [class^=anchor_]:hover, [class^=title] [class^=contents_] [class^=anchor_]:hover, [class^=title] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=title] [class^=modal] [class^=anchor_]:hover, [class^=title] [class^=topic_] [class^=anchor_]:hover {
+  background-color: var(--brand-experiment);
+}
+
+
+
+[class*=unreadMentionsFixedFooter_]{bottom: 0px !important;}
+
+[class^=footer_]:has([class*=fixedDiscoveryIcon_]) {display: none; }
+
+
+
+
+/*Clippy Status*/
+@font-face {
+    font-family: w95;
+    src: url("https://saltssaumure.github.io/w9x-discord-theme/font/w95fa.woff2")
+}
+  .outer_af9888 ,
+  .inner_af9888  {
+      background-color: #ffc
+  }
+  .outer_af9888 {
+      border-radius: 12px;
+      border: 1px solid #000 !important
+  }
+  .outer_af9888::before {
+      border: 1px solid #000;
+      border-radius: 0;
+      inset: unset;
+      height: 6px;
+      width: 12px;
+      top: 10px;
+      transform: skewX(60deg);
+      left: -6px
+  }
+  .inner_af9888 {
+      border-radius: 10px;
+      padding: 6px
+  }
+  .content_af9888  {
+      color: #000
+  }
+  .statusText_af9888 {
+      color: inherit;
+      font-family: "w95", var(--font-primary)
+  }
+  .outer_af9888::after {
+      display: none
+  }
+
+
+
+/* Aligned Chatbox */
+:is(main,section)[class^=chatContent] > form,
+form > div[class^=submitContainer] {
+  /* align chatbox */
+  padding: 0px;
+  > div { margin-bottom: 0px; border-radius: 0px; }
+  > div[class^=channelBottomBarArea] {
+    > div { margin: 0px;  }
+    > div > div:not(.floatingBars__74017) {
+      padding-top: 4px;
+      min-height: 49px;
+      border-radius: 0px;
+    }
+  }
+
+  /* move slowmode/typing indicator to match */
+  > div[class^=typing] {
+    top: -24px;
+    right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+    margin-left: auto;
+    width: fit-content;
+    padding-left: 2px;
+    padding-right: 9px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+  }
+  /* make scrollbar meet chatbox */
+  &::after { display: none; }
+
+  /* fix replies */
+  > div > div > div[class^=attachedBars] {
+    min-height: unset !important;
+    padding-bottom: 4px;
+  }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+  left: 0; right: unset;
+  border-radius: 0px 8px 0px 0px;
+  background-color: var(--channeltextarea-background);
+  > button[class^=barButtonMain] {
+    flex: 0 0 auto;
+    display: none;
+  }
+}
