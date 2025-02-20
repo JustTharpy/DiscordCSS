@@ -1,8 +1,8 @@
 /**
-* @name Improved Links
-* @author Riddim_GLiTCH
+* @name Improved Discord
+* @author Tharpadarp
 * @version 1.0
-* @description Modifies the appearance of plain links to look more like a channel/user mention. Also optionally unhides the masked links from Discord's recently added markdown feature.
+* @description Modifies the appearance Discord
 */
 /*Improved Links*/
 [class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
@@ -25,12 +25,7 @@
 }
 
 
-/**
-* @name Use Original Codeblock Colors
-* @author dav154
-* @version 1.0
-* @description Use Original Codeblock Colors
-*/
+
 /*Use Original Codeblock Colors*/
 #app-mount .hljs-comment,
 #app-mount .hljs-quote {
@@ -99,12 +94,7 @@
 }
 
 
-/**
-* @name Use Original Codeblock Colors
-* @author dav154
-* @version 1.0
-* @description Use Original Codeblock Colors
-*/
+
 /*Use Original Codeblock Colors*/
 #app-mount .hljs-comment,
 #app-mount .hljs-quote {
@@ -173,24 +163,14 @@
 }
 
 
-/**
-* @name Remove stupid ass edit image with AI
-* @author Tharpadarp
-* @version 1.0
-* @description Removes stupid ass edit image with AI button
-*/
+
 /*Remove stupid ass edit image with AI*/
 [aria-label="Edit Image with Apps"] {
   display: none;
 }
 
 
-/**
-* @name Larger Compact Emotes
-* @author Tharpadarp
-* @version 1.3
-* @description Makes compact discord emotes the size of cozy emotes
-*/
+
 /*Compact Emotes Are Larger*/
 .contents_f9f2ca [class="emoji"] ,
 [class="emoji jumboable"] {
@@ -215,12 +195,7 @@
 }
 
 
-/**
-* @name Improved Links
-* @author Riddim_GLiTCH
-* @version 1.0
-* @description Modifies the appearance of plain links to look more like a channel/user mention. Also optionally unhides the masked links from Discord's recently added markdown feature.
-*/
+
 /*Improved Links*/
 [class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
   transition: background-color 50ms ease-out, color 50ms ease-out;
@@ -242,24 +217,14 @@
 }
 
 
-/**
-* @name hidePinDiscovery
-* @author krystalskullofficial
-* @version 2.0
-* @description Hides the new pinned Discovery Icon
-*/
+
 [class*=unreadMentionsFixedFooter_]{bottom: 0px !important;}
 
 [class^=footer_]:has([class*=fixedDiscoveryIcon_]) {display: none; }
 
 
 
-/**
-* @name Clippy Status
-* @author Saltssaumure, Tharpadarp
-* @version 2
-* @description Become Clippy with this status style for the new profile experiment.
-*/
+
 /*Clippy Status*/
 @font-face {
     font-family: w95;
@@ -299,12 +264,7 @@
   }
 
 
-/**
-* @name AlignedChatBox
-* @author CodeF53
-* @version 3.0
-* @description Aligns chat box with the bottom of the screen and user controls
-*/
+
 /* Aligned Chatbox */
 :is(main,section)[class^=chatContent] > form,
 form > div[class^=submitContainer] {
