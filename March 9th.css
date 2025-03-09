@@ -1,0 +1,337 @@
+/**
+* @name Improved Discord
+* @author Tharpadarp
+* @version 1.0
+* @description Modifies the appearance Discord
+*/
+/*Improved Links*/
+[class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
+  transition: background-color 50ms ease-out, color 50ms ease-out;
+  color: var(--mention-foreground);
+  background-color: var(--mention-background);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+  border-bottom: 0px solid var(--brand-700);
+}
+[class^=message_] [class^=contents_] [class^=anchor_]::before, [class^=message_] [class^=repliedMessage_] [class^=anchor_]::before, [class^=message_] [class^=modal] [class^=anchor_]::before, [class^=message_] [class^=topic_] [class^=anchor_]::before, [class^=focusLock] [class^=contents_] [class^=anchor_]::before, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]::before, [class^=focusLock] [class^=modal] [class^=anchor_]::before, [class^=focusLock] [class^=topic_] [class^=anchor_]::before, [class^=title] [class^=contents_] [class^=anchor_]::before, [class^=title] [class^=repliedMessage_] [class^=anchor_]::before, [class^=title] [class^=modal] [class^=anchor_]::before, [class^=title] [class^=topic_] [class^=anchor_]::before {
+  content: "🔗";
+  margin-right: 1px;
+  filter: saturate(0%);
+  font-size: 90%;
+}
+[class^=message_] [class^=contents_] [class^=anchor_]:hover, [class^=message_] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=message_] [class^=modal] [class^=anchor_]:hover, [class^=message_] [class^=topic_] [class^=anchor_]:hover, [class^=focusLock] [class^=contents_] [class^=anchor_]:hover, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=focusLock] [class^=modal] [class^=anchor_]:hover, [class^=focusLock] [class^=topic_] [class^=anchor_]:hover, [class^=title] [class^=contents_] [class^=anchor_]:hover, [class^=title] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=title] [class^=modal] [class^=anchor_]:hover, [class^=title] [class^=topic_] [class^=anchor_]:hover {
+  background-color: var(--brand-experiment);
+}
+
+
+
+/* IMPROVED COMPACT */
+
+[class^="latin24CompactTimeStamp"]  {			/* Timestamps */
+  color: #ffee58 !important;
+  text-shadow: 0 0 10px;
+}
+
+[class^="replyBadge"], [class^="repliedMessage"] [class^="botTagCompact"] {			/*Reply Badge*/
+  display: none;
+}
+
+/* Fix replies. */
+[class*="compact"] [class^="repliedMessage"]:before {
+  right: calc(100% - var(--custom-message-reply-indent));
+}
+[class*="compact"] [class^="repliedMessage"] {
+  right: 13px;
+  bottom: 2px;
+  margin-left: calc(0.1em + 20px);
+}
+[class*="compact"] [class*="repliedMessageClickableSpine"] {
+  right: calc(100% - var(--custom-message-reply-indent));
+}
+
+[class^="roleIcon"] {			/* Hide Role Icons */
+  display: none;
+}
+
+[class^="edited"] {			/* Change edited text */
+  color: rgb(126, 126, 126);
+  text-shadow: 0 0 0;
+  margin-left: 2px;
+}
+
+/* Better Channel Color */
+[class*="modeSelected"] [class^="name"] , [class*="modeConnected"] {			/*Selected Channel*/
+  color: #ffffff !important;
+  text-shadow: 0 0 5px;
+}
+[class*="modeUnreadImportant"] [class^="name"] {			/*Unread Channel*/
+  color: #A4F7F7 !important;
+  text-shadow: 0 0 5px;
+}
+[class="name__29444 container__13cf1 text__13cf1"] {			/*Channel Group Name*/
+  color: rgb(107, 121, 243);
+  text-shadow: 0 0 5px;
+}
+
+/* ShowMeYourName plugin ALT ALT ALT ALT */
+.vc-smyn-suffix {
+  color: currentColor !important;
+  opacity: 0.5;
+
+  &::before {
+    content: "| @" !important;
+  }
+
+  &::after {
+    content: "" !important;
+  }
+}
+[class*="compact_"] [class^="headerText_"] [class^="separator_"] {			/* Add a colon behind the username */
+    color: var(--text-primary);
+    position: unset;
+    opacity: unset;
+    display: initial;
+    font-size: larger;
+    margin-left: .5px;
+  }
+  
+/* Username */
+.cozy_c19a55 .header_c19a55 {
+  margin-bottom: 4px;
+}
+[class*=contents] [class*=username],
+.base_b88801 .text_b88801 strong,
+.name__841c8,
+[class*=repliedMessage] > [class*=username],
+[class*=member] > [class*=username]
+.member__5d473 .username_d272d6 {
+  background: color-mix(in srgb, currentColor 25%, rgba(0, 0, 0, 0.25));
+  text-shadow: 0 0 5px color-mix(in srgb, currentColor 25%, #000);
+  margin-right: 4px;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.username_c19a55::after {
+  position: relative;
+  margin: 0 0 0 8px;
+  color: inherit;
+  text-shadow: 0 0 5px #000;
+}
+
+.username_c19a55:not([style]) {			/* Prevent light mode from making whitenames black (visibility) */
+  color: var(--brand-100);
+}
+
+/*GLOWY BITS*/
+[class^=numberBadge] {			/*ping design*/
+  box-shadow: 0px 0px 9px 2px #ff2d54;
+  background-color: #ff2d54;
+}
+[class*=isCurrentUserConnected] {			/*Selected VC*/
+  box-shadow: 0 0 9px 2px var(--green-360);
+}
+[class*=liveShapeRound] {			/*Live Pill*/
+  box-shadow: 0 0 9px 2px var(--red-400);
+}
+[class*=userSmall] [class*=avatarSpeaking] {			/* VC Voice Rings */
+  outline: 2.5px solid rgb(44, 200, 106);
+  box-shadow: 0px 0px 6px rgb(0, 16, 3),  0px 0px 10px 5px rgb(44, 200, 106),  0px 0px 6px rgba(0, 0, 0, 0.953);
+}
+[class^=pill] [class^=item] {			/*Selected Server*/
+  box-shadow: 0 0 9px #A4F7F7;
+  background-color: #A4F7F7;
+}
+/*
+.username_c19a55 {			Username
+	text-shadow: 0 0 9px !important;
+}*/
+
+.message__5126c:hover:not([class*="mentioned"])  {      /*Message Hover Pink Bar*/
+  background: linear-gradient(to right, #b246c242 2px, #02020200 2px) !important;
+}
+.messageListItem__5126c:nth-child(even) {     /*Every Other Message Background Kinda*/
+  background-color: #3b3b3b1e !important;
+}
+[class="imageContent__0f481 embedVideo__623de embedMedia__623de"] {     /*Remove Stupid Ass Embed Background*/
+  background: none !important;
+}
+
+
+/*Use Original Codeblock Colors*/
+#app-mount .hljs-comment,
+#app-mount .hljs-quote {
+  color: #586e75;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-keyword,
+#app-mount .hljs-selector-tag {
+  color: #859900;
+}
+#app-mount .hljs-doctag,
+#app-mount .hljs-literal,
+#app-mount .hljs-meta .hljs-meta-string,
+#app-mount .hljs-number,
+#app-mount .hljs-regexp,
+#app-mount .hljs-string {
+  color: #2aa198;
+}
+#app-mount .hljs-name,
+#app-mount .hljs-section,
+#app-mount .hljs-selector-class,
+#app-mount .hljs-selector-id,
+#app-mount .hljs-title,
+#app-mount .hljs-operator {
+  color: #268bd2;
+  font-weight: inherit;
+}
+#app-mount .hljs-attr,
+#app-mount .hljs-attribute,
+#app-mount .hljs-title.class_,
+#app-mount .hljs-template-variable,
+#app-mount .hljs-type,
+#app-mount .hljs-variable {
+  color: #b58900;
+}
+#app-mount .hljs-bullet,
+#app-mount .hljs-link,
+#app-mount .hljs-meta,
+#app-mount .hljs-meta .hljs-keyword,
+#app-mount .hljs-selector-attr,
+#app-mount .hljs-selector-pseudo,
+#app-mount .hljs-subst,
+#app-mount .hljs-symbol {
+  color: #cb4b16;
+}
+#app-mount .hljs-built_in,
+#app-mount .hljs-deletion {
+  color: #dc322f;
+}
+#app-mount .hljs-formula {
+  background: #073642;
+}
+#app-mount .hljs-addition,
+#app-mount .hljs-deletion {
+  background-color: unset;
+}
+#app-mount .hljs-emphasis {
+  font-style: italic;
+}
+#app-mount .hljs-strong {
+  font-weight: 700;
+}
+
+:root {
+  --font-code: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+
+
+/*Remove stupid ass edit image with AI*/
+[aria-label="Edit Image with Apps"] {
+  display: none;
+}
+
+
+
+/*Compact Emotes Are Larger*/
+.contents_c19a55 [class="emoji"] ,
+[class="emoji jumboable"] {
+  font-size: 34px;                              /*This is what makes emotes larger*/
+  bottom: 12px                              /*Makes messages with emotes larger*/
+}
+.threadMessageAccessory_c19a55 [class="emoji"] {     /*Thread containers no longer have oversized emotes*/
+  font-size: 16px !important;
+}
+.contents_c19a55::before {      /*Hide weird extension of Thread*/
+  display: none;
+}
+
+[class="repliedMessage_c19a55 latin24CompactTimeStamp_c19a55"]:has(+ .contents_c19a55 [class="emoji"] , + .contents_c19a55 [class="emoji jumboable"]) .repliedMessageClickableSpine_c19a55  {      /*Make replied messages with emotes have a longer line*/
+  height: 34px !important;
+}
+.contents_c19a55 [class="emoji"] {          /*Moves emotes to be in line*/
+  transform: translate(0px, 12px);
+}
+.contents_c19a55:has([class="emoji jumboable"]) {         /*Moves emotes to be in line*/
+  transform: translate(0px, 12px);
+}
+
+
+
+/*Improved Links*/
+[class^=message_] [class^=contents_] [class^=anchor_], [class^=message_] [class^=repliedMessage_] [class^=anchor_], [class^=message_] [class^=modal] [class^=anchor_], [class^=message_] [class^=topic_] [class^=anchor_], [class^=focusLock] [class^=contents_] [class^=anchor_], [class^=focusLock] [class^=repliedMessage_] [class^=anchor_], [class^=focusLock] [class^=modal] [class^=anchor_], [class^=focusLock] [class^=topic_] [class^=anchor_], [class^=title] [class^=contents_] [class^=anchor_], [class^=title] [class^=repliedMessage_] [class^=anchor_], [class^=title] [class^=modal] [class^=anchor_], [class^=title] [class^=topic_] [class^=anchor_] {
+  transition: background-color 50ms ease-out, color 50ms ease-out;
+  color: var(--mention-foreground);
+  background-color: var(--mention-background);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 3px;
+  border-bottom: 0px solid var(--brand-700);
+}
+[class^=message_] [class^=contents_] [class^=anchor_]::before, [class^=message_] [class^=repliedMessage_] [class^=anchor_]::before, [class^=message_] [class^=modal] [class^=anchor_]::before, [class^=message_] [class^=topic_] [class^=anchor_]::before, [class^=focusLock] [class^=contents_] [class^=anchor_]::before, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]::before, [class^=focusLock] [class^=modal] [class^=anchor_]::before, [class^=focusLock] [class^=topic_] [class^=anchor_]::before, [class^=title] [class^=contents_] [class^=anchor_]::before, [class^=title] [class^=repliedMessage_] [class^=anchor_]::before, [class^=title] [class^=modal] [class^=anchor_]::before, [class^=title] [class^=topic_] [class^=anchor_]::before {
+  content: "🔗";
+  margin-right: 1px;
+  filter: saturate(0%);
+  font-size: 90%;
+}
+[class^=message_] [class^=contents_] [class^=anchor_]:hover, [class^=message_] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=message_] [class^=modal] [class^=anchor_]:hover, [class^=message_] [class^=topic_] [class^=anchor_]:hover, [class^=focusLock] [class^=contents_] [class^=anchor_]:hover, [class^=focusLock] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=focusLock] [class^=modal] [class^=anchor_]:hover, [class^=focusLock] [class^=topic_] [class^=anchor_]:hover, [class^=title] [class^=contents_] [class^=anchor_]:hover, [class^=title] [class^=repliedMessage_] [class^=anchor_]:hover, [class^=title] [class^=modal] [class^=anchor_]:hover, [class^=title] [class^=topic_] [class^=anchor_]:hover {
+  background-color: var(--brand-experiment);
+}
+
+
+
+[class*=unreadMentionsFixedFooter_]{bottom: 0px !important;}
+
+[class^=footer_]:has([class*=fixedDiscoveryIcon_]) {display: none; }
+
+
+
+
+/* Aligned Chatbox */
+:is(main,section)[class^=chatContent] > form,
+form > div[class^=submitContainer] {
+  /* align chatbox */
+  padding: 0px;
+  > div { margin-bottom: 0px; border-radius: 0px; }
+  > div[class^=channelBottomBarArea] {
+    > div { margin: 0px;  }
+    > div > div:not(.floatingBars__74017) {
+      padding-top: 4px;
+      min-height: 49px;
+      border-radius: 0px;
+    }
+  }
+
+  /* move slowmode/typing indicator to match */
+  > div[class^=typing] {
+    top: -24px;
+    right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+    margin-left: auto;
+    width: fit-content;
+    padding-left: 2px;
+    padding-right: 9px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+  }
+  /* make scrollbar meet chatbox */
+  &::after { display: none; }
+
+  /* fix replies */
+  > div > div > div[class^=attachedBars] {
+    min-height: unset !important;
+    padding-bottom: 4px;
+  }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+  left: 0; right: unset;
+  border-radius: 0px 8px 0px 0px;
+  background-color: var(--channeltextarea-background);
+  > button[class^=barButtonMain] {
+    flex: 0 0 auto;
+    display: none;
+  }
+}
+
